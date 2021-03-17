@@ -29,7 +29,6 @@ export async function getStaticProps ({ params }) {
     'romanoInnerPage',
     `business/${params.titleSlug}`
   )
-  console.log('entry: ', entry)
   return {
     props: {
       titleSlug: params.titleSlug,
@@ -50,7 +49,7 @@ export default function Home ({
   return (
     <div>
       <Head>
-        <title>Romana Law</title>
+        <title>Romano Law</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
