@@ -29,13 +29,6 @@ export async function getStaticProps ({ params }) {
     'romanoInnerPage',
     `entertainment/${params.titleSlug}`
   )
-  if (!entry) {
-    return {
-      props: {
-        titleSlug: params.titleSlug
-      }
-    }
-  }
   return {
     props: {
       titleSlug: params.titleSlug,

@@ -11,7 +11,7 @@ export async function getStaticPaths () {
   )
 
   const paths = allInnerPageEntries.items
-    .filter(({ fields: { slug } }) => slug.startsWith('business-disputes'))
+    .filter(({ fields: { slug } }) => slug.startsWith('business-disputes/'))
     .map(({ fields: { slug } }) => ({
       params: {
         titleSlug: slug.replace('business-disputes/', '')
@@ -29,13 +29,6 @@ export async function getStaticProps ({ params }) {
     'romanoInnerPage',
     `business-disputes/${params.titleSlug}`
   )
-  if (!entry) {
-    return {
-      props: {
-        titleSlug: params.titleSlug
-      }
-    }
-  }
   return {
     props: {
       titleSlug: params.titleSlug,
