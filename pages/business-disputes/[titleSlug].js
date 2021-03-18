@@ -29,6 +29,13 @@ export async function getStaticProps ({ params }) {
     'romanoInnerPage',
     `business-disputes/${params.titleSlug}`
   )
+  if (!entry) {
+    return {
+      props: {
+        titleSlug: params.titleSlug
+      }
+    }
+  }
   return {
     props: {
       titleSlug: params.titleSlug,
@@ -49,14 +56,14 @@ export default function Home ({
   return (
     <div>
       <Head>
-        <title>Romana Law</title>
+        <title>Romano Law</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
-        <h1>{title}</h1>
-        <p>{slug}</p>
-        <img src={heroImage.fields.file.url} />
+        <h1>{title && title}</h1>
+        <p>{slug && slug}</p>
+        <img src={heroImage && heroImage.fields.file.url} />
       </main>
     </div>
   )
