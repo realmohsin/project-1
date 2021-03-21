@@ -1,22 +1,20 @@
 import Head from 'next/head'
-import {
-  getContentfulEntryById,
-  getAllEntriesByContentType
-} from '../lib/contentful'
+import { getContentfulEntryById } from '../lib/contentful'
 
-// export async function getStaticProps () {
-//   // const contentfulEntry = await getContentfulEntryById('4E5RmU2Xmzz8VGO68T3l4p')
-//   const allInnerPageEntries = await getAllEntriesByContentType(
-//     'romanoInnerPage'
-//   )
-//   return {
-//     props: {
-//       allInnerPageEntries
-//     }
-//   }
-// }
+export async function getStaticProps () {
+  const entry = await getContentfulEntryById('3nn5zUNgvTdYFATlxaunTU')
 
-export default function Home () {
+  return {
+    props: {
+      fields: {
+        ...entry.fields
+      }
+    }
+  }
+}
+
+export default function Home ({ fields }) {
+  console.log('fields - ', fields)
   return (
     <div>
       <Head>
@@ -24,7 +22,12 @@ export default function Home () {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main>romano law</main>
+      <main>
+        <h1>{fields.heroImageTitle}</h1>
+        <img src={fields.heroImage1.fields.file.url} />
+        <img src={fields.heroImage2.fields.file.url} />
+        <img src={fields.heroImage3.fields.file.url} />
+      </main>
     </div>
   )
 }
