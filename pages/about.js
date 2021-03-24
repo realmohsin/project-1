@@ -1,32 +1,40 @@
 import Head from 'next/head'
-import {
-  getContentfulEntryById,
-  getAllEntriesByContentType,
-  getEntryByTitleSlug
-} from '../lib/contentful'
+import Layout from '../components/layout'
+import AboutHeroSection from '../components/about-page/about-hero-section'
+import AboutSection from '../components/about-page/about-section'
+import TeamSection from '../components/about-page/team-section'
+import ReviewsSection from '../components/about-page/reviews-section'
+import ContactForm from '../components/contact-form'
+import Footer from '../components/footer'
+import { getContentfulEntryById } from '../lib/contentful'
 
-export async function getStaticProps ({ params }) {
-  const entry = await getEntryByTitleSlug('romanoAboutPage', `about`)
-  console.log('about entry: ', entry)
+export async function getStaticProps () {
+  const entry = await getContentfulEntryById('tD3Q4aMYSr6jXLqugNHM8')
+
   return {
     props: {
-      ...entry.fields
+      fields: {
+        ...entry.fields
+      }
     }
   }
 }
 
-export default function About ({ heroImage }) {
+export default function About ({ fields }) {
+  console.log('fields - ', fields)
+  console.log(fields.heroImage.fields.file.url)
   return (
-    <div>
+    <Layout>
       <Head>
-        <title>About Page</title>
+        <title>Romana Law</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main>
-        <h1>About Page</h1>
-        <img src={heroImage.fields.file.url} />
-      </main>
-    </div>
+      <AboutHeroSection aboutHeroImgSrc={fields.heroImage.fields.file.url} />
+      <AboutSection />
+      <TeamSection />
+      <ReviewsSection />
+      <ContactForm />
+      <Footer />
+    </Layout>
   )
 }

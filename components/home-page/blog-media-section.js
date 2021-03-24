@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { css } from '@emotion/react'
+import Button from '../button'
 
 export default function BlogMediaSection () {
   const [sectionType, setSectionType] = useState('blog')
@@ -86,7 +87,7 @@ export default function BlogMediaSection () {
           <p className='blogItemReadMore'>(read more...)</p>
         </div>
       </div>
-      <button isLink text='Visit Our Blog' extraClassName='button' />
+      <Button isLink text='Visit Our Blog' extraClassName='button' />
     </div>
   )
 
@@ -173,7 +174,7 @@ export default function BlogMediaSection () {
           </h5>
         </div>
       </div>
-      <button isLink text='Visit our Media Page' extraClassName='button' />
+      <Button isLink text='Visit our Media Page' extraClassName='button' />
     </div>
   )
 

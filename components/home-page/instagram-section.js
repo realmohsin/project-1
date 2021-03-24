@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { css } from '@emotion/react'
+import Button from '../button'
 
 export default function InstagramSection () {
   return (
@@ -21,7 +22,7 @@ export default function InstagramSection () {
               </div>
             ))}
         </div>
-        <button
+        <Button
           isLink
           href='https://www.instagram.com'
           text={'Visit our Instagram'}

@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import LogoHeader from './headers/logo-header'
+import StickyCTA from './headers/sticky-cta'
 import Navbar from './navigation/navbar'
 
 export default function Layout ({ children }) {
@@ -19,6 +21,8 @@ export default function Layout ({ children }) {
       </Head>
 
       <header>
+        <StickyCTA />
+        <LogoHeader />
         <Navbar />
       </header>
 

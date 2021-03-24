@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import HeroSection from '../components/homepage/hero-section'
+import HeroSection from '../components/home-page/hero-section'
 import { getContentfulEntryById } from '../lib/contentful'
-import FeaturedOnSection from '../components/homepage/featured-on-section'
-import IntroSection from '../components/homepage/intro-section'
-import FocusSection from '../components/homepage/focus-section'
-import InstagramSection from '../components/homepage/instagram-section'
-import BlogMediaSection from '../components/homepage/blog-media-section'
+import FeaturedOnSection from '../components/home-page/featured-on-section'
+import IntroSection from '../components/home-page/intro-section'
+import FocusSection from '../components/home-page/focus-section'
+import InstagramSection from '../components/home-page/instagram-section'
+import BlogMediaSection from '../components/home-page/blog-media-section'
+import ContactForm from '../components/contact-form'
+import Footer from '../components/footer'
 
 export async function getStaticProps () {
   const entry = await getContentfulEntryById('3nn5zUNgvTdYFATlxaunTU')
@@ -38,6 +40,8 @@ export default function Home ({ fields }) {
       <FocusSection />
       <InstagramSection />
       <BlogMediaSection />
+      <ContactForm />
+      <Footer />
       {/* <h1>{fields.heroImageTitle}</h1>
         <img src={fields.heroImage1.fields.file.url} />
         <img src={fields.heroImage2.fields.file.url} />

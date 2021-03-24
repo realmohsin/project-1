@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { css } from '@emotion/react'
+import Button from '../button'
 
 export default function FocusSection () {
   return (
@@ -14,7 +15,7 @@ export default function FocusSection () {
               From startups to larger corporations, we provide a range of legal
               services to help your business grow.
             </p>
-            <button isLink text='Learn More' extraClassName='button' />
+            <Button isLink text='Learn More' extraClassName='button' />
           </div>
           <div item xs={12} sm={7} className='rowImgContainer'>
             <Image
@@ -47,7 +48,7 @@ export default function FocusSection () {
               We’re here to provide guidance to production companies, producers,
               talent and other industry professionals as you build your career.
             </p>
-            <button isLink text='Learn More' extraClassName='button' />
+            <Button isLink text='Learn More' extraClassName='button' />
           </div>
         </div>
 
@@ -61,7 +62,7 @@ export default function FocusSection () {
               with the litigation or defense of commercial matters in state,
               federal bankruptcy, federal district and federal appellate courts.
             </p>
-            <button isLink text='Learn More' extraClassName='button' />
+            <Button isLink text='Learn More' extraClassName='button' />
           </div>
           <div item xs={12} sm={7} className='rowImgContainer'>
             <Image
