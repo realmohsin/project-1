@@ -26,17 +26,12 @@ export default function Navbar () {
         </li>
         <li>
           <Link href='/business-disputes/internet-law'>
-            <a>Disputes</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/blog'>
-            <a>Blog</a>
+            <a>Business Disputes</a>
           </Link>
         </li>
         <li>
           <Link href='/careers'>
-            <a>Entertainment Law</a>
+            <a>Careers</a>
           </Link>
         </li>
         <li>

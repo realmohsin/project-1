@@ -33,7 +33,7 @@ export default function About ({ fields }) {
       <AboutSection />
       <TeamSection />
       <ReviewsSection />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Footer />
     </Layout>
   )
