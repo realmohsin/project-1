@@ -13,7 +13,7 @@ export default function Footer () {
   return (
     <footer
       className='footer'
-      style={{ backgroundImage: 'url(/images/dark-bg.gif)' }}
+      // style={{ backgroundImage: 'url(/images/dark-bg.gif)' }}
     >
       <div className='container'>
         <div container>

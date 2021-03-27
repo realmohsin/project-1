@@ -96,7 +96,7 @@ export default function BlogMediaSection () {
       className={`mediaSection ${sectionType === 'media' && 'activeSection'}`}
     >
       <h2 className='hiddenTitle'>Media</h2>
-      <div container>
+      {/* <div container>
         <div item xs={12} md={6} className='mediaItem leftMediaItem'>
           <div className='videoContainer'>
             <iframe
@@ -173,7 +173,7 @@ export default function BlogMediaSection () {
             OF CHINA – 8/23/2019
           </h5>
         </div>
-      </div>
+      </div> */}
       <Button isLink text='Visit our Media Page' extraClassName='button' />
     </div>
   )

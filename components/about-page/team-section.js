@@ -7,7 +7,7 @@ const TeamSection = () => {
       <div className='container'>
         <h2 className='teamSectionTitle'>Legal Team</h2>
         <div container>
-          {Array(6)
+          {Array(20)
             .fill()
             .map((_, i) => (
               <div item xs={12} sm={6} md={4} className='gridItem'>
