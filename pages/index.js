@@ -22,7 +22,7 @@ export async function getStaticProps () {
   }
 }
 
-export default function Home ({ fields }) {
+export default function HomePage ({ fields }) {
   console.log('fields - ', fields)
   return (
     <Layout>
@@ -42,10 +42,6 @@ export default function Home ({ fields }) {
       <BlogMediaSection />
       <ContactForm />
       <Footer />
-      {/* <h1>{fields.heroImageTitle}</h1>
-        <img src={fields.heroImage1.fields.file.url} />
-        <img src={fields.heroImage2.fields.file.url} />
-        <img src={fields.heroImage3.fields.file.url} /> */}
     </Layout>
   )
 }

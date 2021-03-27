@@ -22,7 +22,7 @@ import JobListings from '../components/careers-page/job-listings'
 //   }
 // }
 
-export default function About () {
+export default function CareersPage () {
   return (
     <Layout>
       <Head>

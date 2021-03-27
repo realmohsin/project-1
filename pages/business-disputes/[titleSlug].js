@@ -4,6 +4,8 @@ import {
   getEntryByTitleSlug,
   getAllEntriesByContentType
 } from '../../lib/contentful'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types'
 
 export async function getStaticPaths () {
   const allInnerPageEntries = await getAllEntriesByContentType(

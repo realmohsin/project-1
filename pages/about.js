@@ -20,7 +20,7 @@ export async function getStaticProps () {
   }
 }
 
-export default function About ({ fields }) {
+export default function AboutPage ({ fields }) {
   console.log('fields - ', fields)
   console.log(fields.heroImage.fields.file.url)
   return (
