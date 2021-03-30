@@ -12,6 +12,11 @@ export default function Layout ({ children }) {
           name='description'
           content='Learn how to build a personal website using Next.js'
         />
+        <link rel='preconnect' href='https://fonts.gstatic.com' />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=PT+Serif&family=Piazzolla&display=swap'
+          rel='stylesheet'
+        />
         <meta
           property='og:image'
           content={`https://og-image.vercel.app/site.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
@@ -23,7 +28,7 @@ export default function Layout ({ children }) {
       <header>
         <StickyCTA />
         <LogoHeader />
-        <Navbar />
+        {/* <Navbar /> */}
       </header>
 
       <main>{children}</main>

@@ -39,7 +39,7 @@ export default function HomePage ({ fields }) {
       <IntroSection />
       <FocusSection />
       <InstagramSection />
-      <BlogMediaSection />
+      {/* <BlogMediaSection /> */}
       <ContactForm />
       <Footer />
     </Layout>

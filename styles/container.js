@@ -1,0 +1,16 @@
+import { css } from '@emotion/react'
+
+const container = css`
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 600px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+`
+
+export default container
